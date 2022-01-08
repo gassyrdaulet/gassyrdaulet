@@ -34,7 +34,6 @@ h1{
     content: '-';
 }
 .container {
-	min-height: 100vh;
 	display: flex;
     width: 100%;
 	align-items: center;
@@ -313,16 +312,16 @@ p{
     max-width: 400px;
 }
 .desc-item h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: start;
     min-height: 50px;
 }
 .desc-item p{
-    padding-top: 30px;
     text-align: justify;
+    font-size: 1.3rem;
 }
 .desc-item h2{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: end;
 }
 #contacts {
@@ -334,7 +333,6 @@ p{
     margin: 0 auto;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 100vh;
     display: flex;
 } 
 #contacts .contacts .contacts-first{
@@ -524,6 +522,7 @@ p{
     font-size: 1.2rem;
 }
 #delivery{
+    margin-top: 80px;
     width: 100%;
 }
 #delivery .delivery{
@@ -588,7 +587,7 @@ p{
     line-height: 1.4rem;
 }
 #footer-section {
-    margin-top: 150px;
+    margin-top: 50px;
     /* border-top: 2px solid black; */
     display: flex;
     box-shadow: 0px 0px 5px black;
