@@ -1,651 +1,218 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap');
 * {
-	padding: 0;
-	margin: 0;
-}
-html {
-	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
-}
-a {
-	text-decoration: none;
-}
-h1{
-    color: black;
-    font-size: 3rem;
-    font-weight: 900;
-    line-height: 3rem;
-    text-transform: uppercase;
-}
-.brand h1{
-    text-align: center;
-    color: royalblue;
-    font-weight: 900;
-    text-align: center;
-}
-.brand span{
-    color: crimson;
-}
-.section-title h1::after{
-    content: "-";
-}
-.section-title h1::before{
-    content: '-';
-}
-.container {
-	display: flex;
-    width: 100%;
-	align-items: center;
-	justify-content: center;
-}
-img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-}
-p{
-    font-size: 1.8rem;
-    font-weight: 300;
-}
-.purple-btn{
-    display: inline-block;
-    background-image: linear-gradient(90deg, #ff0000 0%, #077DEA 100%);
-    font-weight: 600;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-    color: white;
-    padding: 7.5px 41px;
-    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.43);
-    animation: button-shining 1.5s ease infinite;
-}
-.purple-btn:active{
-    background-image: none;
-    color: black;
-}
-#header{
-    width: 100%;
-    box-shadow: 0 0 5px black;
-    min-height: 6vh;
-    position: fixed;
-    background-color: white;
-    z-index: 1000;
-}
-#header .header{
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-#header .header .hamburger{
-    border: 3px solid black;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-	position: relative;
-    z-index: 100;
-    /* background-image: linear-gradient(90deg, #ff0000 0%, #077DEA 100%); */
-}
-#header .hamburger .bar {
-	height: 2px;
-	width: 25px;
-	background-color: black;
-    position: relative;
-}
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: black;
-	transition: 0.3s ease;
-	transition-property: top, bottom;
-}
-#header .hamburger .bar::after {
-	top: 8px;
-}
-#header .hamburger .bar::before {
-	bottom: 8px;
-}
-#header .hamburger.active .bar::before {
-	bottom: 0;
-}
-#header .hamburger.active .bar::after {
-	top: 0;
-}
-#header .nav-list ul{
-    list-style: none;
-    position: absolute;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    left: -105%;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    overflow: hidden;
-    transition: 0.45s ease left;
-    border-right: 2px solid black;
-}
-#header .nav-list ul.active {
-	left: -25%;
-}
-#header .nav-list ul a{
-	font-size: 3rem;
-	font-weight: 700;
-	text-decoration: none;
-	color: black;
-	text-transform: uppercase;
-    padding: 15px;
-    display: block;
-}
-#header .nav-list ul{
-    display: flex;
-    align-items: flex-end;
-}
-#header .header .call-me{
-    width: 40px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 #main{
-    width: 100%;
     height: auto;
-    /* background-color: #ffeeee; */
 }
 #main .main{
-    max-width: 1200px;
     min-height: 100vh;
-    align-items: center;
-    margin: 0 auto;
-    justify-content: center;
-    flex-direction: column;
-    overflow-x: hidden;
-}
-#main .main-images-window{
-    max-width: 900px;
-    overflow: hidden;
-}
-#main .main-images{
-    width: 4000px;
-    height: 50vh;
-    position: relative;
-    background-image: url(./img/main_img.png);
-    background-size: contain;
-    background-position: top center;
-    animation: image-dance 20s infinite;
-}
-#main .offer-theme h1{
-    text-transform: none;
-}
-#main .offer-desc{
-    padding-top: 15px;
-}
-#main .main-offer{
-    margin: 15px 30px;
-}
-#main .main-offer .button{
-    padding-top: 10px;
-}
-#catalog{
-    height: auto;
     width: 100%;
-}
-#catalog .catalog{
     max-width: 1200px;
     margin: 0 auto;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
-#catalog .catalog .section-title{
-    margin: 60px 0 10px 0;
+#main .main .game-name h1{
+    font-size: 2rem;
+    text-align: center;
+    background-color: blueviolet;
+    color: whitesmoke;
+    margin: 5px;
+    border-radius: 9px;
+    transition: 0.4s ease font-size;
 }
-.slider{
-    width: 100%;
+#main .main .game-name h1:hover{
+    font-size: 2.5rem;
 }
-.slider-window{
-    margin: 0 auto;
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    overflow: hidden;
-    position: relative;
+#main .main .game-controls{
+    padding: 50px 50px;
+}
+#main .main .game-controls .gas-button{
+    width: 100px;
+    height: 50px;
+    font-size: 1.5em;
+    font-weight: 700;
     border-radius: 10px;
+    color: black;
+    border: 3px solid black;
+    transition: 0.3s ease font-size;
+    background-color: greenyellow;
 }
-.slider-window::before{
-    content: '';
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    background-color: #C4C4C4;
-    width: 60%;
-    height: 75%;
-    z-index: -1;
+#main .main .game-controls .gas-button:active{
+    font-size: 1.9rem
 }
-.slider-track{
+#main .main .game-controls .active{
+    background-color: tomato;
+}
+#main .main .game-field .car{
+    width: 300px;
+    height: 100px;
+    /* border: 3px solid black; */
     display: flex;
-    transition: 0.3s;
+    flex-direction: row;
 }
-.slider-item{
-    height: 50%;
-    max-height: 300px;
+#main .main .game-field .car .third{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+#main .main .game-field .car .car-1{
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+}
+#main .main .game-field .car .sixth{
+    height: 50px;
+}
+#main .main .game-field .car .car-1 .car-1-1{
+    background-color: crimson;
     position: relative;
 }
-.slider-item img{
-    object-fit: scale-down;
-}
-/* .slider-item:nth-child(3n+1){
-    background-color: chartreuse;
-}
-.slider-item:nth-child(3n+2){
-    background-color: crimson;
-}
-.slider-item:nth-child(3n+3){
-    background-color: royalblue;
-} */
-.buttons{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+#main .main .game-field .car .car-1 .car-1-1::after{
+    content: '';
+    background-color: white;
     position: absolute;
-    left: 0;
-    top: 35%;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    border-bottom-right-radius: 100px;
+}
+#main .main .game-field .car .car-1 .car-1-1::before{
+    background-color: crimson;
+    content: '';
+    width: 112%;
+    height: 50%;
+    position: absolute;
+    border-radius: 60px;
+    top: 18px;
+    left: 68px;
+    /* border: 3px solid black; */
     z-index: 10;
 }
-.buttons button{
-    background-color: transparent;
-    font-weight: 900;
-    border: none;
-    height: 100px;
-    width: 50px;
+#main .main .game-field .car .car-1 .car-1-2{
+    background-color: crimson;
+    border-top-left-radius: 25px;
+    position: relative;
 }
-.buttons button img{
-    object-fit: contain;
-}
-.buttons .prev{
-    transform: rotate(180deg);
-}
-.buttons button:disabled img{
-    display: none;
-}
-.dots-window{
-    width: 80%;
-    max-width: 400px;
-    margin: 0 auto;
-}
-.dots-items{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.dots-item{
-    padding: 10px;
-}
-.desc-window{
-    width: 80%;
-    max-width: 400px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-.desc-track{
-    display: flex;
-    flex-direction: row;
-    height: 50vh;
-    max-height: 300px;
-    transition: 0.5s;
-}
-.desc-item{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 400px;
-}
-.desc-item h1{
-    font-size: 2rem;
-    text-align: start;
-    min-height: 50px;
-}
-.desc-item p{
-    text-align: justify;
-    font-size: 1.3rem;
-}
-.desc-item h2{
-    font-size: 2rem;
-    text-align: end;
-}
-#contacts {
-    width: 100%;
-}
-#contacts .contacts{
-    max-width: 1200px;
-    /* border: 2px solid black; */
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: space-between;
-    display: flex;
-} 
-#contacts .contacts .contacts-first{
-    margin-top: 90px;
-    text-align: center;
-    margin-bottom: 30px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-#contacts .contacts .contacts-second{
-    padding-top: 10px;
-    overflow: hidden;
-}
-#contacts .contacts .contacts-second img{
-    /* box-shadow: 0px 0px 5px black; */
-    height: 400px;
-}
-#contacts .contacts .contact-item{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    /* border: 2px solid black; */
-    border-radius: 15px;
-    box-shadow: 0px 1px 5px black;
-    justify-content: center;
-    min-height: 100px;
-    width: 80vw;
-}
-#contacts .contacts .contact-item .contact-item-content{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    align-items: center;
-    /* border: 2px solid black; */
-}
-#contacts .contacts .contact-item .contact-icon{
+#main .main .game-field .car .car-1 .car-1-2 .wheel{
     width: 50px;
     height: 50px;
-    /* border: 1px solid red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-#contacts .contacts .contact-item .contact-icon p{
-    font-size: 5rem;
-}
-#contacts .contacts .contact-item .contact-info{
-    margin-left: 25px;
-    /* border: 2px solid blue; */
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.reports-section{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-.reports-section .reports{
-    margin-top: 20px;
-    width: 100%;
-}
-.reports-section .reports .reports-window{
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow-x: scroll;
-}
-.reports-section .reports .reports-window::-webkit-scrollbar{
-    height: 8px;
-    background-color: #C4C4C4;
-    border-radius: 10px;
-}
-.reports-section .reports .reports-window::-webkit-scrollbar-thumb {
+    border: 5px solid black;
     background-color: black;
-    border-radius: 10px;
+    border-radius: 100%;
+    position: absolute;
+    top: 10px;
+    left: 5px;
 }
-.reports-section .reports .reports-window .reports-track{
-    margin-right: 10px;
-    display: flex;
-    flex-direction: row;
+#main .main .game-field .car .active{
+    animation: wheels-spinning 0.2s infinite;
 }
-/* .reports-section .reports .reports-window{
-    width: 80%;
-    max-width: 500px;
-    margin: 0 auto;
-    height: 70vh;
-    overflow-y: scroll;
-}
-.reports-section .reports .reports-window::-webkit-scrollbar{
-    width: 5px;
-    background-color: #C4C4C4;
-    border-radius: 10px;
-}
-.reports-section .reports .reports-window::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 10px;
-}
-.reports-section .reports .reports-window .reports-track{
-    margin-right: 10px;
-} */
-.reports-section .reports .reports-window .reports-track .reports-item{
-    height: 20vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    background-image: linear-gradient(90deg, #ff0000 0%, #077DEA 100%);
-    margin: 12px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    box-shadow: 0 0px 5px black;
-    min-width: 270px;
-}
-.reports-section .reports .reports-window .reports-track .reports-item p{
-    font-weight: 600;
-    color: white;
-    font-size: 1.2rem;
-}
-.reports-section .reports .reports-window .reports-track .reports-item .left-side{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    min-width: 120px;
-    margin-left: 5px;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    /* border: 2px solid blue; */
-}
-.reports-section .reports .reports-window .reports-track .reports-item .left-side img{
-    height: 100px;
-    border-radius: 100px;
-    max-width: 100px;
-}
-.reports-section .reports .reports-window .reports-track .reports-item .right-side{
-    margin-left: 5px;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* border: 2px solid blue; */
-}
-
-.reports-section .reports .reports-window .reports-track .reports-item .right-side .stars{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-.reports-section .reports .reports-window .reports-track .reports-item .right-side .stars img{
-    width: 20px;
-}
-.reports-section .reports .feedback{
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-}
-.reports-section .reports .give-a-feedback{
-    width: 20vw;
-    max-width: 150pxpx;
-    min-height: 50px;
-    display: flex;
-    flex-direction: column;
-    /* border: 2px solid black; */
-    /* vertical-align: middle; */
-    /* background-image: linear-gradient(90deg, #ff0000 0%, #077DEA 100%); */
-    background-color: black;
+#main .main .game-field .car .wheel .tire{
     border: 2px solid white;
-    border-radius: 10px;
-    justify-content: center;
-    min-width: 150px;
-
-}
-.reports-section .reports .give-a-feedback:hover{
-    opacity: 0.8;
-}
-.reports-section .reports .give-a-feedback:active{
-    opacity: 0.6;;
-}
-.reports-section .reports .give-a-feedback p{
-    text-align: center;
-    font-weight: 800;
-    color: white;
-    font-size: 1.2rem;
-}
-#delivery{
-    margin-top: 80px;
-    width: 100%;
-}
-#delivery .delivery{
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #c4c4c4;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    left: 10px;
+    top: 10px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-}
-#delivery .delivery .delivery-content{
-    display: flex;
-    border-radius: 10px;
-    /* border: 2px solid black; */
-    flex-direction: column;
-    margin: 15px 15px;
-    overflow: hidden;
-    max-width: 600px;
-}
-#delivery .delivery .delivery-content .delivery-item{
-    display: flex;
-    max-height: 350px;
     flex-direction: row;
-    background-color: violet;
-    /* background-image: linear-gradient(90deg, #ff0000 0%, #077DEA 100%); */
-}
-#delivery .delivery .delivery-content .delivery-item:nth-child(2n){
-    flex-direction: row-reverse;
-}
-#delivery .delivery .delivery-content .delivery-item .delivery-first{
-    width: 50%;
-    min-height: 50vw;
-}
-#delivery .delivery .delivery-content .delivery-item .delivery-first img{
-    object-fit: cover;
-}
-#delivery .delivery .delivery-content .delivery-item .delivery-second{
-    /* margin: 5px 5px; */
-    width: 50%;
-    display: flex;
+    overflow: hidden;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-image: linear-gradient(90deg, #ff0000 0%, #077DEA 100%);
 }
-#delivery .delivery .delivery-content .delivery-item .delivery-second .delivery-text{
-    margin: 10px 10px;
-}
-#delivery .delivery .delivery-content .delivery-item .delivery-second h1{
-    font-size: 1.7rem;
-    line-height: 1.7rem;
-    color: white;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 5px;
-}
-#delivery .delivery .delivery-content .delivery-item .delivery-second p{
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: justify;
-    color: white;
-    line-height: 1.4rem;
-}
-#footer-section {
-    margin-top: 50px;
-    /* border-top: 2px solid black; */
+#main .main .game-field .car .wheel .column-holes{
     display: flex;
-    box-shadow: 0px 0px 5px black;
     flex-direction: column;
-    padding: 20px;
-    justify-content: space-between;
 }
-#footer-section .brand{
-    margin-top: 30px;
-    text-align: center;
+#main .main .game-field .car .wheel .tire .hole{
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    background-color: black;
 }
-#footer-section .footer-items{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 30px;
+#main .main .game-field .car .wheel .tire .not-hole{
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
 }
-#footer-section .footer-items img{
-    max-width: 50px;
+#main .main .game-field .car .wheel .tire .center{
+    background-color: transparent;
+    position: relative;
 }
-#footer-section .copyright p{
-    text-align: center;
-    font-size: 1rem;
+#main .main .game-field .car .wheel .tire .center::after{
+    content: '';
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
 }
-@keyframes button-shining {
-    0% {
+#main .main .game-field .car .car-2 .car-2-1{
+    background-color: crimson;
+    /* border-top-left-radius: 15px; */
+    border-top-right-radius: 50px;
+    border-top-left-radius: 5px;
+    border-collapse: collapse;
+    position: relative;
+    
+}
+#main .main .game-field .car .car-2 .car-2-1::after{
+    content: '';
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -10px;
+    top: -25px;
+    border-bottom-right-radius: 0px;
+}
+#main .main .game-field .car .car-2 .car-2-2{
+    background-color: crimson;
+}
+#main .main .game-field .car .car-3 .car-3-1{
+    background-color: crimson;
+    position: relative;
+}
+#main .main .game-field .car .car-3 .car-3-1::after{
+    content: '';
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 130%;
+    left: -30px;
+    border-bottom-left-radius: 100px;
+}
+#main .main .game-field .car .car-3 .car-3-2{
+    background-color: crimson;
+    border-top-right-radius: 50px;
+    position: relative;
+}
+#main .main .game-field .car .car-3 .car-3-2 .wheel{
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+@keyframes wheels-spinning {
+    0%{
         transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(2deg);
-    }
-    15% {
-        transform: rotate(-2deg);
-    }
-    20% {
-        transform: rotate(2deg);
-    }
-    25% {
-        transform: rotate(-2deg);
     }
     50%{
-        transform: rotate(0deg);
+        transform: rotate(180deg);
     }
     100%{
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
-}
-@keyframes image-dance {
-    0% {
-        transform: translateX(-5%);
-    }
-    50%{
-        transform: translateX(-50%);
-    }
-    100%{
-        transform: translateX(-5%);
-    }
-}
-@media only screen and (min-width:768px){
     
 }
