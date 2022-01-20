@@ -674,7 +674,7 @@ img {
     padding: 0 20px;
 }
 .pay-methods .pay-item{
-    width: 100px;
+    width: 80px;
 }
 .pay-methods .pay-item img{
     object-fit: contain;
@@ -756,6 +756,9 @@ img {
     .reports .reports-content{
         min-height: 400px;
         margin-top: 0;
+    }
+    .pay-methods .pay-item{
+        width: 110px;
     }
 }
 @media only screen and (min-width: 1200px) {
