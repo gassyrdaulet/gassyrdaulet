@@ -18,7 +18,7 @@ const desc_items = document.querySelectorAll('.desc-item');
 const desc_track = document.querySelector('.desc-track');
 const allDots = document.querySelectorAll('.dots-item-text');
 let dot_position = 0;
-const any_item_except_ul = document.querySelectorAll('#main, #catalog, #delivery, #contacts, #reports, #footer');
+const any_item_except_ul = document.querySelectorAll('#main, #catalog, #delivery, #contacts-and-reports, #footer-section');
 
 allItems.forEach((item) => {
     item.style.minWidth = `${itemWidth}px`;

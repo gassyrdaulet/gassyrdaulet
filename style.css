@@ -27,6 +27,9 @@ img {
 .brand span{
     color: crimson;
 }
+.brand p{
+    font-weight: 500;
+}
 .purple-btn{
     display: inline-block;
     background-image: linear-gradient(90deg, #ff0000 0%, #077DEA 100%);
@@ -83,10 +86,11 @@ img {
     cursor: pointer;
 	position: relative;
     z-index: 100;
+    margin: 4px;
     /* background-image: linear-gradient(90deg, #ff0000 0%, #077DEA 100%); */
 }
 #header .hamburger .bar {
-	height: 2px;
+	height: 2.4px;
 	width: 20px;
 	background-color: black;
     position: relative;
@@ -151,14 +155,38 @@ img {
     display: flex;
     align-items: flex-end;
 }
-#header .header .call-me{
-    transition: 0.4s ease transform;
+#header .header .call-me-desktop{
+    display: none;
+    cursor: pointer;
+    margin-left: 20px;
 }
-#header .header .call-me:hover{
+#header .header .call-me-desktop a{
+    display: flex;
+    align-items: center;
+}
+#header .header .call-me-desktop .icon{
+    background-image: url(./img/telephone.svg);
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+}
+#header .header .call-me-desktop:hover{
     animation: button-shining 1.3s infinite;
 }
-#header .header .call-me a img{
-    transform: scale(0.7);
+#header .header .call-me-mobile a{
+    display: flex;
+    background-image: url(./img/telephone.svg);
+    width: 36px;
+    height: 36px;
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    margin: 4px;
+}
+#header .header .call-me-desktop p{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    color: black;
 }
 /* End Header */
 
@@ -385,7 +413,7 @@ img {
     display: flex;
     max-height: 300px;
     flex-direction: row;
-    background-color: violet;
+    background-color: rgb(184, 78, 245);
     overflow: hidden;
 }
 #delivery .delivery .delivery-content .delivery-item:hover .delivery-first img{
@@ -509,8 +537,23 @@ img {
     justify-content: center;
     overflow: hidden;
 }
-#contacts-and-reports .contacts-and-reports .contact-item .contact-icon p{
-    font-size: 5rem;
+#contacts-and-reports .contacts-and-reports .contact-item .icon-item-adress{
+    background-size: 40px 40px;
+    background-image: url(./img/icons/icons8-adress.svg);
+    width: 40px;
+    height: 40px;
+}
+#contacts-and-reports .contacts-and-reports .contact-item .icon-item-phone{
+    background-size: 40px 40px;
+    background-image: url(./img/icons/icons8-phone.png);
+    width: 40px;
+    height: 40px;
+}
+#contacts-and-reports .contacts-and-reports .contact-item .icon-item-time{
+    background-size: 40px 40px;
+    background-image: url(./img/icons/icons8-time.png);
+    width: 40px;
+    height: 40px;
 }
 #contacts-and-reports .contacts-and-reports .contact-item .contact-info{
     margin-left: 25px;
@@ -519,12 +562,31 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 65%;
+}
+#contacts-and-reports .contacts-and-reports .contact-item .contact-info .whatsapp-button{
+    background-color: forestgreen;
+    display: inline-block;
+    width: 60px;
+    border-radius: 15px;
+    padding: 2px;
+    margin: 5px 1px 1px 0;
+}
+#contacts-and-reports .contacts-and-reports .contact-item .contact-info .whatsapp-button a{
+    color: white;
+}
+#contacts-and-reports .contacts-and-reports .contact-item .contact-info a{
+    color: black;
+}
+#contacts-and-reports .contacts-and-reports .contact-item .contact-info p{
+    text-align: center;
+    font-size: 1rem;
 }
 .reports{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px 0 0 0;
+    margin: 80px 0 50px 0;
 }
 .reports .reports-content{
     display: flex;
@@ -532,6 +594,18 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3); */
+    overflow: hidden;
+}
+.reports .reports-content .reports-wrapper{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    padding: 10px;
+    overflow: hidden;
+    margin: 10px;
 }
 .reports .reports-window{
     width: 80vw;
@@ -541,7 +615,7 @@ img {
 }
 .reports .reports-window::-webkit-scrollbar{
     height: 8px;
-    background-color: #C4C4C4;
+    background-color: #c2c2c2;
     border-radius: 10px;
 }
 .reports .reports-window::-webkit-scrollbar-thumb {
@@ -580,7 +654,8 @@ img {
     margin: 12px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
-    box-shadow: 0 0px 5px black;
+    border: 3px solid black;
+    /* box-shadow: 0 0px 5px black; */
     min-width: 270px;
 }
 .reports .reports-window .reports-track .reports-item p{
@@ -604,6 +679,7 @@ img {
     border-radius: 100px;
     max-width: 100px;
     pointer-events: none;
+    background-color: whitesmoke;
 }
 .reports .reports-window .reports-track .reports-item .right-side{
     margin: 15px 0 0 5px;
@@ -641,10 +717,10 @@ img {
     min-width: 150px;
 }
 .reports .give-a-feedback:hover{
-    opacity: 0.8;
+    background-color: #292525;
 }
 .reports .give-a-feedback:active{
-    opacity: 0.6;
+    background-color: #554d4d;
 }
 .reports .give-a-feedback p{
     text-align: center;
@@ -687,10 +763,12 @@ img {
 /* Footer */
 #footer-section {
     /* border-top: 2px solid black; */
-    display: flex;
     box-shadow: 0px 0px 5px black;
-    flex-direction: column;
     padding-bottom: 20px;
+}
+#footer-section .footer-section{
+    flex-direction: column;
+    display: flex;
     justify-content: space-between;
 }
 #footer-section .brand{
@@ -701,14 +779,43 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 30px;
+    margin: 0 0 10px 0;
+    align-items: center;
 }
-#footer-section .footer-items img{
-    max-width: 50px;
+#footer-section .footer-items a:active{
+    transition: 0.35s ease transform;
 }
-#footer-section .copyright p{
+#footer-section .footer-items a:active{
+    transform: scale(1.2);
+}
+#footer-section .footer-items .whatsapp-icon{
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/icons/icons8-whatsapp.svg);
+    background-size: 40px 40px;
+}
+#footer-section .footer-items .insta-icon{
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/icons/icons8-insta.svg);
+    background-size: 40px 40px;
+}
+#footer-section .footer-items .telegram-icon{
+    width: 35px;
+    height: 35px;
+    background-image: url(./img/icons/icons8-telegram.png);
+    background-size: 35px 35px;
+}
+#footer-section .footer-items .vk-icon{
+    width: 40px;
+    height: 40px;
+    background-image: url(./img/icons/icons8-vk.svg);
+    background-size: 40px 40px;
+}
+#footer-section p{
     text-align: center;
     font-size: 1rem;
+    font-weight: 400;
 }
 /* End Footer */
 
@@ -753,14 +860,30 @@ img {
         justify-content: center;
     }
     #contacts-and-reports .contacts-and-reports .reports{
-        margin: 0 0 0 80px;
+        margin: 0 0px 0 50px;
     }
     .reports .reports-content{
-        min-height: 400px;
-        margin-top: 0;
+        min-height: 390px;
+        margin-top: 30px;
     }
     .pay-methods .pay-item{
         width: 110px;
+    }
+    #footer-section .footer-section{
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 10px;
+    }
+    #footer-section .footer-section .footer-items{
+        margin: 0;
+    }
+    #footer-section .footer-section .brand{
+        margin: 0 0 0 10px;
+    }
+    #footer-section .footer-section .copyright{
+        margin: 0 10px 0 0;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -785,11 +908,17 @@ img {
     #header .header .nav-list ul li a{
         font-size: 1.7rem;
         font-weight: 500;
-        transition: 0.3s border-bottom;
+        transition: 0.15s color;
     }
     #header .header .nav-list ul li a:hover{
         text-decoration: underline;
         color: crimson;
+    }
+    #header .header .call-me-desktop{
+        display: flex;
+    }
+    #header .header .call-me-mobile{
+        display: none;
     }
     #catalog .catalog .catalog-content .content-wrapper .useful-info{
         display: flex;
@@ -806,6 +935,19 @@ img {
     #catalog .catalog .catalog-content .content-wrapper .useful-info h1{
         text-align: center;
         font-size: 3rem;
+    }
+    #contacts-and-reports .contacts-and-reports .contact-item{
+        width: 420px;
+        max-width: 500px;
+    }
+    #footer-section .footer-items a:hover{
+        animation: button-shining-two 0.2s infinite;
+    }
+    #footer-section .footer-section .brand{
+        margin: 0;
+    }
+    #footer-section .footer-section .copyright{
+        margin: 0;
     }
 }
 /* End Media Queries */
@@ -832,6 +974,23 @@ img {
     }
     100%{
         transform: rotate(0deg);
+    }
+}
+@keyframes button-shining-two {
+    0% {
+        transform: rotate(-5deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
     }
 }
 @keyframes image-dance {
