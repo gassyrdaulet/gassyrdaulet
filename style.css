@@ -56,6 +56,7 @@ img {
 }
 /* Header */
 #header{
+    /* display: none; */
     width: 100%;
     box-shadow: 0 0 5px black;
     position: fixed;
@@ -164,6 +165,7 @@ img {
 /* Main Section */
 #main{
     width: 100%;
+    /* display: none; */
     overflow-x: hidden;
 }
 #main .main{
@@ -218,6 +220,7 @@ img {
 /* Catalog Section */
 #catalog{
     width: 100%;
+    /* display: none; */
     background:
     radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent),
     radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent) 0 -50px;
@@ -359,6 +362,7 @@ img {
 #delivery{
     width: 100%;
     padding: 80px 0;
+    /* display: none; */
 }
 #delivery .delivery{
     max-width: 1200px;
@@ -432,6 +436,7 @@ img {
 /* Contacts and Reports*/
 #contacts-and-reports{
     width: 100%;
+    /* display: none; */
     background:
     radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent),
     radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent) 0 -50px;
@@ -480,7 +485,7 @@ img {
     /* border: 2px solid black; */
     justify-content: center;
     min-height: 110px;
-    width: 80vw;
+    width: 300px;
     max-width: 380px;
 }
 #contacts-and-reports .contacts-and-reports .contact-item .contact-item-content{
@@ -529,7 +534,7 @@ img {
     justify-content: center;
 }
 .reports .reports-window{
-    width: 80%;
+    width: 80vw;
     max-width: 350px;
     margin: 0 auto;
     overflow-x: scroll;
@@ -639,7 +644,7 @@ img {
     opacity: 0.8;
 }
 .reports .give-a-feedback:active{
-    opacity: 0.6;;
+    opacity: 0.6;
 }
 .reports .give-a-feedback p{
     text-align: center;
