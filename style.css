@@ -382,7 +382,7 @@ img {
 }
 #catalog .catalog .catalog-content .content-wrapper .slider-wrapper .desc-track{
     display: flex;
-    max-height: 200px;
+    max-height: 300px;
     transition: 0.5s;
 }
 #catalog .catalog .catalog-content .content-wrapper .slider-wrapper .desc-item{
@@ -873,6 +873,9 @@ img {
     }
     #catalog .catalog .catalog-content .content-wrapper .slider-wrapper .slider .dots-item{
         padding: 0 8px;
+    }
+    #catalog .catalog .catalog-content .content-wrapper .slider-wrapper .desc-window{
+        width: 68%;
     }
     #delivery .delivery .delivery-content .delivery-item .delivery-second h1{
         font-size: 2.3rem;
