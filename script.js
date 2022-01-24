@@ -32,10 +32,12 @@ const inputIin = document.querySelector(".iin-number");
 const inputBin = document.querySelector(".bin-number");
 const inputFirst = document.querySelector(".firstText");
 const inputSecond = document.querySelector(".secondText");
+const inputThird = document.querySelector(".thirdText");
 const actualIin = document.querySelector(".a-iin-number");
 const actualBin = document.querySelector(".a-bin-number");
 const actualFirst = document.querySelector(".first-text");
 const actualSecond = document.querySelector(".second-text");
+const actualThird = document.querySelector(".third-text");
 const startButton = document.querySelector(".settings-menu .start-button");
 
 startButton.addEventListener('click', ()=>{
@@ -43,6 +45,7 @@ startButton.addEventListener('click', ()=>{
     actualBin.innerText = inputBin.value;
     actualFirst.innerText = inputFirst.value;
     actualSecond.innerText = inputSecond.value;
+    actualThird.innerText = inputThird.value;
     sMenu.classList.toggle("active");
     rButton.classList.toggle("active");
 });
