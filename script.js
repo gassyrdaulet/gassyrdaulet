@@ -30,13 +30,19 @@ rButton.addEventListener('click', ()=>{
 
 const inputIin = document.querySelector(".iin-number");
 const inputBin = document.querySelector(".bin-number");
+const inputFirst = document.querySelector(".firstText");
+const inputSecond = document.querySelector(".secondText");
 const actualIin = document.querySelector(".a-iin-number");
 const actualBin = document.querySelector(".a-bin-number");
+const actualFirst = document.querySelector(".first-text");
+const actualSecond = document.querySelector(".second-text");
 const startButton = document.querySelector(".settings-menu .start-button");
 
 startButton.addEventListener('click', ()=>{
     actualIin.innerText = inputIin.value;
     actualBin.innerText = inputBin.value;
+    actualFirst.innerText = inputFirst.value;
+    actualSecond.innerText = inputSecond.value;
     sMenu.classList.toggle("active");
     rButton.classList.toggle("active");
 });
