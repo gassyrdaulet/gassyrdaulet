@@ -3,515 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>JackMarket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="header">
-            <div class="hamburger">
-                <div class="bar"></div>
+            <div class="returning-header">
+                <a href="#" class="return-link">
+                    <div class="return-button">
+                        <div class="bar"></div>
+                    </div>
+                </a>
             </div>
-            <div class="brand"> <a href="#"><h1><span>Jack</span>Market</h1></a></div>
-            <div class="nav-list">
-                <div class="call-me-mobile">
-                    <a href="tel:+77072387155">
-                        <!-- <img src="./img/telephone.svg" alt=""> -->
-                    </a>
-                </div>
-                <div class="call-me-desktop">
-                    <a href="tel:+77072387155">
-                        <div class="icon"></div>
-                        <p>+7 707 238 71 55</p>
-                        <!-- <img src="./img/telephone.svg" alt=""> -->
-                    </a>
-                    
-                </div>
+            <div class="ashyq-text">
+                <p>
+                    ASHYQ. Статус по коронавирусу
+                </p>
+            </div>
+            <div class="settings-menu">
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#slider">Каталог</a></li>
-                    <li><a href="#delivery">Доставка</a></li>
-                    <li><a href="#contacts-and-reports">Контакты</a></li>
-                    <li><a href="#reports-section">Отзывы</a></li>
+                    <li><div class="settings-item"><h3>Введите свой ИИН: </h3> <input type="number" class="iin-number"></div></li>
+                    <li><div class="settings-item"><h3>Введите ИИН/БИН организации: </h3> <input type="number" class="bin-number"></div></li>
+                    <li><div class="settings-item"><h3>Первый текст под статусом: </h3> <input value="Не имеет ограничений, вацинирован, переболевший или ПЦР-тест отрицательный." type="text" class="firstText"></div></li>
+                    <li><div class="settings-item"><h3>Второй текст под статусом: </h3> <input value="" type="text" class="secondText"></div></li>
+                    <li><div class="settings-item"><h3>Третий текст под статусом: </h3> <input value="Срок действия статуса до 25.07.23" type="text" class="thirdText"></div></li>
+                    <button class="start-button">start</button>
                 </ul>
             </div>
         </div>
     </header>
-    <!-- End Header -->
-
-    <!-- Main Section -->
     <section id="main">
         <div class="main">
-            <div class="main-content">
-                <div class="main-images-window">
-                    <div class="main-images"></div>
+            <div class="green-zone">
+                <div class="zone-wrapper">
+                    <h1>Безопасный</h1>
+                    <p class="first-text">Не имеет ограничений, вацинирован, переболевший или ПЦР-тест отрицательный.</p>
+                    <p class="second-text"></p>
+                    <p class="third-text">Срок действия статуса до 20.07.2022</p>
                 </div>
-                <div class="main-offer">
-                    <div class="offer-theme">
-                        <h1>Бытовая электроника 
-                        и многое другое
-                        с доставкой на дом</h1>
-                    </div>
-                    <div class="offer-desc">
-                        <p>Онлайн магазин бытовой
-                        техники в пару кликов
-                        предоставит Вам то, что вы
-                        ищете</p>
-                    </div>     
-                    <div class="button">
-                        <a href="#slider" class="purple-btn">
-                            Посмотреть
-                        </a>
-                    </div>
+            </div>
+            <div class="timer">
+                <p>Вы можете войти в течение</p>
+                <div class="timer-show">
+                    <h2 class="minutes">0</h2>
+                    <h2 class="seconds">0</h2>
+                    <h2 class="deci-seconds">0</h2>
                 </div>
+            </div>
+            <div class="iin">
+                <div class="iin-item">
+                    <p>ИИН</p>
+                    <h3 class="a-iin-number">000000000000</h3>
+                </div>
+                <div class="iin-item">
+                    <p>ИИН/БИН организации</p>
+                    <h3 class="a-bin-number">000000000000</h3>
+                </div>
+            </div>
+            <div class="returning">
+                <a href="#" class="return-button">
+                    Вернуться на Главную Kaspi.kz
+                </a>
             </div>
         </div>
     </section>
-    <!-- End Main Section -->
-
-    <!-- Catalog -->
-    <section id="catalog">
-        <div id="slider" class="catalog">
-            <div class="catalog-content">
-                <div  class="section-title wrapper">
-                    <div  class="section-title">
-                        <h1>Каталог</h1>
-                    </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="useful-info">
-                        <h1>Добро пожаловать в наш Мини-Каталог</h1>
-                        <h1>👋</h1>
-                    </div>
-                    <div class="slider-wrapper">
-                        <button class="prev"></button>
-                        <div  class="slider">
-                            <div class="image-window">
-                                <div class="image-track">
-                                    <div class="mobile-item slider-item-image">
-                                        <img src="./img/00item.png" alt="Кронштейн для телевизора в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/1item.png" alt="Кронштейн для телевизора в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/2item.png" alt="Рации оптом и в розницу в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/3item.png" alt="Intex Надувной матрас в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/4item.png" alt="Электрический чайник в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/5item.png" alt="Телевизор Yasin в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/6item.png" alt="Духовая печь в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/7item.png" alt="Смарт приставка в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/8item.png" alt="Злата электрическая плитка в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/9item.png" alt="Сега в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/10item.png" alt="Т2 приставка Отау тв в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/11item.png" alt="Машинка для стрижки в Нур-Султан">
-                                    </div>
-                                    <div class="slider-item-image">
-                                        <img src="./img/12item.png" alt="Микроволновка в Нур-Султан">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dots">
-                                <div class="dots-window">
-                                    <div class="dots-items">
-                                        <div class="mobile-item dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                        <div class="dots-item"><p class ="dots-item-text">0</p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="desc-window">
-                                <div class="desc-track">
-                                    <div class="mobile-item desc-item">
-                                        <h1>Для заказа</h1>
-                                        <p>Просто нажмите на кнопку <span class="whatsapp-button"><a href="https://wa.me/77768290879">WhatsApp</a></span> и оформите свой заказ</p>
-                                        <h2>Более подробный список товаров по <span class="link-special"> <a target="_blank" href="https://instagram.com/jack_market_01?utm_medium=copy_link">ссылке</a> </span></h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Кронштейн для Телевизора</h1>
-                                        <p>У нас есть 4 вида кронштейнов под самые различные телевизоры. Наклонный кронштейн, поворотный, потолочный и просто прямой. Легкая установка, прочный металл. Обратитесь к нам, мы поможем Вам выбрать подходящий!</p>
-                                        <h2>Цена: от 1800тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Рации WLN, Kenwood, Baofeng</h1>
-                                        <p>Простой и надежный функционал. Компактный размер и хорошая слышимость. Достаточно включить на рациях одинаковые каналы и они готовы к использованию. Радиус действия 2 километра. Продаем оптом и в розницу!</p>
-                                        <h2>Цена: от 5000тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Матрас Надувной Intex</h1>
-                                        <p>Надувные матрасы  INTEX оригинального производства. Подходят как и для активного отдыха так и для домашнего пользования. Ширины: 76см, 99см, 137см, 151см и 183см. </p>
-                                        <h2>Цена: от 6500тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Чайник Электрический</h1>
-                                        <p>Электрические чайники из нержавеющей стали по очень доступной цене. Автоотключение, подсветка, объем - 2,2л.</p>
-                                        <h2>Цена: 3500тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Телевизор Yasin 81см Smart TV</h1>
-                                        <p>Самый продаваемый телевизор года! LCD экран 32 дюймовой диагонали. Интернет, Android, DVB-T2 - все встроено! Также есть версии более больших диагоналей. Свяжитесь с нами для подробностей!</p>
-                                        <h2>Цена: 96890тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Духовая печь ASEL</h1>
-                                        <p> Духовые печи ASEL оригинального прроизводства из Турции. Объем - 36л. Два тена и две формы для выпекания. Различная расцветка: белая, черная, красная и серая. А также приемлимая цена!</p>
-                                        <h2>Цена: 25900тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>ТВ бокс Tanix TX3 mini</h1>
-                                        <p>Превратите свой обычный телевизор в Смарт! Wi-Fi, Android, 4k FullHD в одной приставке. Просматривайте YouTube, LimeTV, и многое другое прямо со своего ТВ! </p>
-                                        <h2>Цена: 10000тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Электрическая плита Злата</h1>
-                                        <p>Качественная плитка российского производства. Высокая долговечность и надежная работа. Черная и Белая расцветки. Одно и двух-конфорочные виды моделей.</p>
-                                        <h2>Цена: 14490тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>SEGA MD 16bit игровая приставка</h1>
-                                        <p>Ретро-приставка в старом любимом дизайне. Все точно также как и тогда. 5 встроенных игр включая Соника. Подключение через AV (тюльпаны) штекер. </p>
-                                        <h2>Price: 7500тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Т2 Отау ТВ приставка</h1>
-                                        <p>Цифровые бесплатные каналы HD качества! Подключите домашнюю антенну и наслаждайтесь просмотром 24-26 отечественных каналов Казахстана. Простая настройка и доступная цена!</p>
-                                        <h2>Цена: 5800тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Машинка для стрижки ENZO</h1>
-                                        <p>Мощная машинка для стрижки ENZO EN-1400 с лезвием из нержавеющей стали. Работает от сети 220В. 5 насадок, ножницы и расческа в комплекте.</p>
-                                        <h2>Цена: 9890тг</h2>
-                                    </div>
-                                    <div class="desc-item">
-                                        <h1>Микроволновая печь AVA</h1>
-                                        <p>Диаметр поворотного стола, мм - 245
-                                            Тип покрытия - Эмаль
-                                            Звуковой сигнал
-                                            Объём, л - 20
-                                            Тип управления - Механический
-                                            Количество уровней мощности - 5
-                                            Мощность микроволн, Вт - 700</p>
-                                        <h2>Цена: 30900тг</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="next"></button>
-                    </div>
-                    <div class="useful-info">
-                        <h1>😊</h1>
-                        <h1>Не забывайте оставлять отзывы!</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Catalog -->
-
-    <!-- Delivery -->
-    <section id="delivery">
-        <div class="delivery container">
-            <div class="section-title">
-                <h1>
-                    доставка
-                </h1>
-            </div>
-            <div class="delivery-content">
-                <div class="delivery-item">
-                    <div class="delivery-first">
-                        <img src="./img/delivery-item1.png" alt="">
-                    </div>
-                    <div class="delivery-second">
-                        <div class="delivery-text">
-                            <h1>Доставка в день заказа</h1>
-                            <p>Доставим товар в день заказа при заказе до 13:00 дня</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="delivery-item">
-                    <div class="delivery-first">
-                        <img src="./img/delivery-item2.png" alt="">
-                    </div>
-                    <div class="delivery-second">
-                        <div class="delivery-text">
-                            <h1>В черте города</h1>
-                            <h1>Нур-Султан</h1>
-                            <p>Стоимость доставки от 700тг до 1200тг</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="delivery-item">
-                    <div class="delivery-first">
-                        <img src="./img/delivery-item3.png" alt="">
-                    </div>
-                    <div class="delivery-second">
-                        <div class="delivery-text">
-                            <h1>Расчет при получении</h1>
-                            <p>Сперва товар, потом деньги</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Delivery -->
-
-    <!-- Contacts and Reports-->
-    <section id="contacts-and-reports">
-        <div class="contacts-and-reports">
-            <div class="contacts">
-                <div class="section-title">
-                    <h1>контакты</h1>
-                </div>
-                <div class="contacts-content">
-                    <div class="contacts-items">
-                        <div class="contact-item">
-                            <div class="contact-item-content">
-                                <div class="contact-icon">
-                                    <div class="icon-item-adress"></div>
-                                </div>
-                                <div class="contact-info">
-                                    <p>г. Нур-Султан, ул. Ш.Косшыгулулы, 9</p>
-                                    <p>ТД "Северный", 4 этаж, 402 бутик</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-content">
-                                <div class="contact-icon">
-                                    <div class="icon-item-phone"></div>
-                                </div>
-                                <div class="contact-info">
-                                    <a href="tel:87768290879"><p>+7 (776) 829 08 79</p></a>
-                                    <a href="tel:87758181325"><p>+7 (775) 818 13 25</p></a>
-                                    <p>
-                                        Есть 
-                                        <span class="whatsapp-button">
-                                            <a  target="_blank" href="https://wa.me/77768290879">
-                                                WhatsApp
-                                            </a>
-                                        </span>
-                                        пишите и звоните!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-content">
-                                <div class="contact-icon">
-                                    <div class="icon-item-time"></div>
-                                </div>
-                                <div class="contact-info">
-                                    <p>Открыты каждый день</p>
-                                    <p>с 10:00 до 19:00</p>
-                                    <p>График работы в праздничные дни уточнять по телефону</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="reports-section" class="reports">
-                <div class="section-title">
-                    <h1>
-                        отзывы
-                    </h1>
-                </div>
-                <div class="reports-content">
-                    <div class="reports-wrapper">
-                        <div class="reports-window">
-                            <div class="reports-track">
-                                <div class="reports-item">
-                                    <div class="left-side">
-                                        <img src="./img/no-avatar.png" alt="">
-                                        <p class="reporter-name">Айгерим</p>
-                                    </div>
-                                    <div class="right-side">
-                                        <p class="report-text">Очень понравилось!
-                                            Быстрая доставка 
-                                            и приветливый персонал.</p>
-                                        <div class="stars">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="reports-item">
-                                    <div class="left-side">
-                                        <img src="./img/no-avatar.png" alt="">
-                                        <p class="reporter-name">Денис</p>
-                                    </div>
-                                    <div class="right-side">
-                                        <p class="report-text">Доставка, как и обещали, день в день, все супер!</p>
-                                        <div class="stars">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="reports-item">
-                                    <div class="left-side">
-                                        <img src="./img/no-avatar.png" alt="">
-                                        <p class="reporter-name">Анастасия</p>
-                                    </div>
-                                    <div class="right-side">
-                                        <p class="report-text">🙌</p>
-                                        <div class="stars">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="reports-item">
-                                    <div class="left-side">
-                                        <img src="./img/no-avatar.png" alt="">
-                                        <p class="reporter-name">Алим</p>
-                                    </div>
-                                    <div class="right-side">
-                                        <p class="report-text">Молодцы, и доставка быстрая, и телевизор хороший.</p>
-                                        <div class="stars">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="reports-item">
-                                    <div class="left-side">
-                                        <img src="./img/no-avatar.png" alt="">
-                                        <p class="reporter-name">Марат</p>
-                                    </div>
-                                    <div class="right-side">
-                                        <p class="report-text">Супер</p>
-                                        <div class="stars">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="reports-item">
-                                    <div class="left-side">
-                                        <img src="./img/no-avatar.png" alt="">
-                                        <p class="reporter-name">Ерсултан</p>
-                                    </div>
-                                    <div class="right-side">
-                                        <p class="report-text">Пока нормально.</p>
-                                        <div class="stars">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="reports-item">
-                                    <div class="left-side">
-                                        <img src="./img/no-avatar.png" alt="">
-                                        <p class="reporter-name">Гулдана</p>
-                                    </div>
-                                    <div class="right-side">
-                                        <p class="report-text">Очень хорошо, спасибо вам большое.</p>
-                                        <div class="stars">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                            <img src="./img/star.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedback">
-                            <a target="_blank" href="https://api.whatsapp.com/send/?phone=77758181325&text=Здравствуйте, Я ставлю вам X звезд потому что..." class="give-a-feedback">
-                                <p>Написать Свой Отзыв!</p>
-                            </a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="payment">
-            <div class="section-title">
-                <h1>Оплата</h1>
-            </div>
-            <div class="pay-methods">
-                <div class="pay-item">
-                    <img src="./img/kqr.png" alt="">
-                </div>
-                <div class="pay-item">
-                    <img src="./img/kred.png" alt="">
-                </div>
-                <div class="pay-item">
-                    <img src="./img/kgold.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Contacts and Reports-->
-    <!-- Footer -->
-    <footer id="footer-section">
-        <div class="footer-section">
-            <div class="brand">
-                <h1> <span>Jack</span>Market </h1>
-                <!-- <p>Онлайн магазин</p> -->
-            </div>
-            <div class="footer-items">
-                <a target="_blank" class="whatsapp-icon icon-item" href="https://wa.me/77758181325"></a> 
-                <a target="_blank" class="insta-icon icon-item" href="https://instagram.com/jack_market_01?utm_medium=copy_link"></a> 
-                <a target="_blank" class="telegram-icon icon-item" href="tg://resolve?domain=FassKoba"></a> 
-                <a class="vk-icon icon-item" href=""></a> 
-            </div>
-            <div class="copyright"><p>Copyright © 2022 JackMarket. All rights reserved.</p></div>
-        </div>
-    </footer>
-    <!-- End Footer -->
     <script src="./script.js"></script>
 </body>
 </html>
