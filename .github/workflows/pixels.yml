@@ -1,0 +1,44 @@
+name: Pixel canvas
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+# shared with the other games: they all commit to main, so run one at a time
+concurrency:
+  group: game
+  cancel-in-progress: false
+
+jobs:
+  paint:
+    if: startsWith(github.event.issue.title, 'px|')
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Paint the pixel
+        env:
+          REPLY_FILE: ${{ runner.temp }}/reply.md
+        run: node .github/game/pixel.js event
+
+      - name: Commit the new canvas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "canvas: update"
+          git push
+
+      - name: Reply and close the issue
+        env:
+          REPLY_FILE: ${{ runner.temp }}/reply.md
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body-file "$REPLY_FILE"
+          gh issue close "$ISSUE_NUMBER" --reason completed

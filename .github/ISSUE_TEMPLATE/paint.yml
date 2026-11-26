@@ -1,0 +1,22 @@
+name: Paint a pixel
+description: Pick a color and press "Submit new issue". The canvas updates in about 30 seconds.
+title: "px|"
+body:
+  - type: dropdown
+    id: color
+    attributes:
+      label: Color
+      description: Do not edit the title, it holds the pixel position.
+      options:
+        - ⬜ White
+        - ⬛ Black
+        - 🟥 Red
+        - 🟧 Orange
+        - 🟨 Yellow
+        - 🟩 Green
+        - 🟦 Blue
+        - 🟪 Purple
+        - 🟫 Brown
+      default: 0
+    validations:
+      required: true
